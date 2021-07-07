@@ -169,29 +169,30 @@ header > .container {
   margin-right: 50px;
 }
 
+.contacts-item {
+  display: flex;
+  align-items: center;
+}
+
 .contacts-item .link {
-  display: block;
   color: var(--primary-text-color);
 }
 
-.contacts-item .link::before {
+.contacts-item::before {
   content: "";
-  display: inline-flex;
   margin-right: 10px;
+  height: 16px;
+  width: 16px;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .icon-envelope::before {
   background-image: url(../images/envelope.svg);
-  height: 12px;
-  width: 16px;
 }
 
 .icon-smartphone::before {
   background-image: url(../images/smartphone.svg);
-  height: 16px;
-  width: 10px;
 }
 
 .contacts .link:hover,
