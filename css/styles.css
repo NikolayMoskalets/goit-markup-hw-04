@@ -420,10 +420,47 @@ header > .container {
 .professions {
   color: var(--primary-text-color);
 
+  margin-bottom: 16px;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+}
+
+.team-links {
+  display: flex;
+  justify-content: center;
+}
+
+.team-social-item::before {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 44px;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.team-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.icon-instagram::before {
+  background-image: url(../images/instagram\ 2.svg);
+}
+
+.icon-twitter::before {
+  background-image: url(../images/twitter\ 1.svg);
+}
+
+.icon-facebook::before {
+  background-image: url(../images/facebook\ 1.svg);
+}
+
+.icon-linkedin::before {
+  background-image: url(../images/linkedin\ 1.svg);
 }
 
 /* Our clients */
