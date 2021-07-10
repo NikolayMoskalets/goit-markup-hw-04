@@ -14,6 +14,7 @@
 :root {
   --primary-text-color: #757575;
   --contacts-footer-color: rgba(255, 255, 255, 0.6);
+  --icons-footer-color: rgba(255, 255, 255, 0.1);
   --title-text-color: #212121;
   --primary-white-color: #ffffff;
   --primary-grey-color: #2f303a;
@@ -531,7 +532,16 @@ footer {
   background-color: var(--primary-grey-color);
 }
 
+footer > .container {
+  display: flex;
+}
+
+.footer-text {
+  margin-right: 70px;
+}
+
 footer .logo {
+  margin-right: 0;
   margin-bottom: 20px;
 }
 
@@ -559,6 +569,62 @@ footer .logo {
 
 .footer-contacts-item:not(:last-child) {
   margin-bottom: 9px;
+}
+
+/* Footer Social */
+
+.footer-social {
+  padding: 12px 0 40px;
+}
+
+.footer-social-title {
+  color: var(--primary-white-color);
+
+  margin-bottom: 20px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-align: left;
+}
+
+.footer-social-links {
+  display: flex;
+}
+
+.footer-social-item::before {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 44px;
+  background-color: var(--icons-footer-color);
+  border-radius: 50%;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-icon-instagram::before {
+  background-image: url(../images/instagram-footer.svg);
+}
+
+.footer-icon-twitter::before {
+  background-image: url(../images/twitter-footer.svg);
+}
+
+.footer-icon-facebook::before {
+  background-image: url(../images/facebook-footer.svg);
+}
+
+.footer-icon-linkedin::before {
+  background-image: url(../images/linkedin-footer.svg);
 }
 
 /* ------------------Portfolio-------------------------- */
