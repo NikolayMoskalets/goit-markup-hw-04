@@ -59,6 +59,7 @@ html {
 
 .link {
   text-decoration: none;
+  cursor: pointer;
 }
 
 img {
@@ -165,37 +166,21 @@ header > .container {
 .contacts {
   display: flex;
   margin-left: auto;
-  align-items: center;
 }
 
 .contacts .contacts-item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.contacts-item {
-  display: flex;
-  align-items: center;
+  margin-right: 30px;
 }
 
 .contacts-item .link {
   color: var(--primary-text-color);
+  display: flex;
 }
 
-.contacts-item::before {
-  content: "";
-  margin-right: 10px;
+.contacts-item-icon {
   height: 16px;
-  width: 16px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.icon-envelope::before {
-  background-image: url(../images/envelope.svg);
-}
-
-.icon-smartphone::before {
-  background-image: url(../images/smartphone.svg);
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 .contacts .link:hover,
