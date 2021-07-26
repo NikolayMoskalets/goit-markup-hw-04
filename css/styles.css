@@ -270,40 +270,6 @@ header > .container {
   display: flex;
 }
 
-/* .feature-item {
-  width: 270px;
-} */
-
-/* .feature-item::before {
-  content: "";
-  display: block;
-
-  height: 120px;
-  margin-bottom: 30px;
-  border-radius: 4px;
-
-  background-color: var(--section-grey-color);
-
-  background-repeat: no-repeat;
-  background-position: center;
-} */
-
-/* .icon-antenna::before {
-  background-image: url(../images/antenna\ 1.svg);
-}
-
-.icon-clock::before {
-  background-image: url(../images/clock\ 1.svg);
-}
-
-.icon-diagram::before {
-  background-image: url(../images/diagram\ 1.svg);
-}
-
-.icon-astronaut::before {
-  background-image: url(../images/astronaut\ 1.svg);
-} */
-
 .feature-item:not(:last-child) {
   margin-right: 30px;
 }
@@ -435,34 +401,30 @@ header > .container {
   justify-content: center;
 }
 
-.team-social-item::before {
-  content: "";
+.team-social-thumb {
   display: block;
-  width: 44px;
-  height: 44px;
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
-  background-position: center;
+width: 44px;
+height: 44px;
+padding: 12px;
+border-radius: 50%;
+color: var(--icon-grey-color) ;
+background-color: var(--primary-white-color);
+}
+
+.team-social-thumb:hover,
+.team-social-thumb:focus {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+}
+
+.team-social-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor; 
 }
 
 .team-social-item:not(:last-child) {
   margin-right: 10px;
-}
-
-.icon-instagram::before {
-  background-image: url(../images/instagram\ 2.svg);
-}
-
-.icon-twitter::before {
-  background-image: url(../images/twitter\ 1.svg);
-}
-
-.icon-facebook::before {
-  background-image: url(../images/facebook\ 1.svg);
-}
-
-.icon-linkedin::before {
-  background-image: url(../images/linkedin\ 1.svg);
 }
 
 /* Our clients */
