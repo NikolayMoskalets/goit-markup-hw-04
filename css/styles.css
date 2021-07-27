@@ -8,7 +8,7 @@
 /* акцент #2196f3 */
 /* хувер акцента #188CE8 */
 /* цвет бордера хедера #ececec*/
-/* цвет бордера карточек #eeeeee */
+/* цвет бордера карточек rgba(238, 238, 238, 1) */
 /* марджин сетки карточек --card-set-gap */
 
 :root {
@@ -23,7 +23,7 @@
   --accent-color: #2196f3;
   --accent-hoover-color: #188ce8;
   --header-border-color: #ececec;
-  --card-border-color: #eeeeee;
+  --card-border-color: rgba(238, 238, 238, 1);
   --card-set-gap: 30px;
 }
 
@@ -364,6 +364,12 @@ header > .container {
 
   background-color: var(--primary-white-color);
   text-align: center;
+
+  box-shadow: 0px 2px 1px 0px #00000033;
+
+  box-shadow: 0px 1px 1px 0px #00000024;
+
+  box-shadow: 0px 4px 4px 0px #00000040;
 }
 
 .team-card:not(:last-child) {
@@ -403,12 +409,12 @@ header > .container {
 
 .team-social-thumb {
   display: block;
-width: 44px;
-height: 44px;
-padding: 12px;
-border-radius: 50%;
-color: var(--icon-grey-color) ;
-background-color: var(--primary-white-color);
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  border-radius: 50%;
+  color: var(--icon-grey-color);
+  background-color: var(--primary-white-color);
 }
 
 .team-social-thumb:hover,
@@ -420,7 +426,7 @@ background-color: var(--primary-white-color);
 .team-social-icon {
   width: 20px;
   height: 20px;
-  fill: currentColor; 
+  fill: currentColor;
 }
 
 .team-social-item:not(:last-child) {
@@ -451,40 +457,26 @@ background-color: var(--primary-white-color);
   justify-content: space-between;
 }
 
-.clients-list-item::before {
-  content: "";
+.clients-list-thumb {
   display: block;
-
+  padding: 16px 32px;
   width: 170px;
   height: 92px;
+  color: var(--icon-grey-color);
   border: 1px solid var(--icon-grey-color);
   border-radius: 4px;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
-.icon-union::before {
-  background-image: url(../images/union.svg);
+.clients-list-thumb:hover,
+.clients-list-thumb:focus {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
-.icon-union-2::before {
-  background-image: url(../images/union-2.svg);
-}
-
-.icon-union-3::before {
-  background-image: url(../images/union-3.svg);
-}
-
-.icon-union-4::before {
-  background-image: url(../images/union-4.svg);
-}
-
-.icon-union-5::before {
-  background-image: url(../images/union-5.svg);
-}
-
-.icon-union-6::before {
-  background-image: url(../images/union-6.svg);
+.clients-list-icon {
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
 }
 
 /* ---footer--- */
@@ -558,36 +550,29 @@ footer .logo {
   display: flex;
 }
 
-.footer-social-item::before {
-  content: "";
-  display: block;
-  width: 44px;
-  height: 44px;
-  background-color: var(--icons-footer-color);
-  border-radius: 50%;
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 .footer-social-item:not(:last-child) {
   margin-right: 10px;
 }
 
-.footer-icon-instagram::before {
-  background-image: url(../images/instagram-footer.svg);
+.footer-social-thumb {
+  display: block;
+  padding: 12px;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  color: var(--primary-white-color);
+  background-color: var(--icons-footer-color);
 }
 
-.footer-icon-twitter::before {
-  background-image: url(../images/twitter-footer.svg);
+.footer-social-thumb:hover,
+.footer-social-thumb:focus {
+  background-color: var(--accent-color);
 }
 
-.footer-icon-facebook::before {
-  background-image: url(../images/facebook-footer.svg);
-}
-
-.footer-icon-linkedin::before {
-  background-image: url(../images/linkedin-footer.svg);
+.footer-social-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 
 /* ------------------Portfolio-------------------------- */
@@ -639,11 +624,18 @@ footer .logo {
 
   color: var(--primary-white-color);
 
+  box-shadow: 0px 2px 2px 0px #0000001f;
+
+  box-shadow: 0px 1px 2px 0px #00000014;
+
+  box-shadow: 0px 3px 1px 0px #0000001a;
+
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
+  cursor: pointer;
 }
 
 /* Projects */
@@ -660,7 +652,15 @@ footer .logo {
   flex-basis: calc(100% / 3 - var(--card-set-gap));
   margin-right: var(--card-set-gap);
   margin-bottom: var(--card-set-gap);
-  border: 1px solid var(--card-border-color);
+}
+
+.project-set .card:hover,
+.project-set .card:focus {
+  box-shadow: 3px 6px 8px 0px #00000029;
+
+  box-shadow: 0px 6px 6px 0px #0000000f;
+
+  box-shadow: 0px 3px 3px 0px #0000001f;
 }
 
 .card-content {
@@ -668,6 +668,9 @@ footer .logo {
   padding: 20px 24px;
 
   background-color: #fff;
+  border-left: 1px solid var(--card-border-color);
+  border-right: 1px solid var(--card-border-color);
+  border-bottom: 1px solid var(--card-border-color);
 }
 
 .project-title {
